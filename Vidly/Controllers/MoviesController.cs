@@ -44,16 +44,36 @@ namespace Vidly.Controllers
             return Content(id.ToString());
         }
 
-        public ActionResult Index(int? page, string sortBy)
+
+        public ActionResult Index()
         {
-            if (!page.HasValue)
-            {
-                page = 567;
-                sortBy = "Drama";
-            }
-            
-            return Content(string.Format("page is {0} and sortBy is {1}", page, sortBy));
+            var movies = getMovies();
+
+            return View(movies);
         }
+
+        public ActionResult Details(int? id)
+        {
+            var movie = getMovies().SingleOrDefault(m => m.Id == id);
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(movie);
+            }
+        }
+        //public ActionResult Index(int? page, string sortBy)
+        //{
+        //    if (!page.HasValue)
+        //    {
+        //        page = 567;
+        //        sortBy = "Drama";
+        //    }
+            
+        //    return Content(string.Format("page is {0} and sortBy is {1}", page, sortBy));
+        //}
 
         public ActionResult ByReleaseDate(int? year, byte? month)
         {
@@ -65,6 +85,15 @@ namespace Vidly.Controllers
         {
 
             return Content("desired genre is :"+ genre);
+        }
+
+        private IEnumerable<Movie> getMovies()
+        {
+            return new  List<Movie> {
+                new Movie { Id = 1, Name = "Evelen Salt" },
+                new Movie { Id = 2, Name = "Shrek" },
+                new Movie { Id = 3, Name = "Harry Potter" }
+            };
         }
     }
 }
