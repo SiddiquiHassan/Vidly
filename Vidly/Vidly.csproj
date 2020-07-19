@@ -177,6 +177,22 @@
     <Compile Include="Migrations\202007191455147_AddedAnnotationToCustomerClass.designer.cs">
       <DependentUpon>202007191455147_AddedAnnotationToCustomerClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007191558093_AddedNameToMembershipType.cs" />
+    <Compile Include="Migrations\202007191558093_AddedNameToMembershipType.designer.cs">
+      <DependentUpon>202007191558093_AddedNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007191559197_PopulatingNameFieldInMembershipTypes.cs" />
+    <Compile Include="Migrations\202007191559197_PopulatingNameFieldInMembershipTypes.designer.cs">
+      <DependentUpon>202007191559197_PopulatingNameFieldInMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007191617444_AddingBirthdayFieldToCustomerTable.cs" />
+    <Compile Include="Migrations\202007191617444_AddingBirthdayFieldToCustomerTable.designer.cs">
+      <DependentUpon>202007191617444_AddingBirthdayFieldToCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007191627209_updatedBirthdateField.cs" />
+    <Compile Include="Migrations\202007191627209_updatedBirthdateField.designer.cs">
+      <DependentUpon>202007191627209_updatedBirthdateField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -260,6 +276,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007191455147_AddedAnnotationToCustomerClass.resx">
       <DependentUpon>202007191455147_AddedAnnotationToCustomerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191558093_AddedNameToMembershipType.resx">
+      <DependentUpon>202007191558093_AddedNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191559197_PopulatingNameFieldInMembershipTypes.resx">
+      <DependentUpon>202007191559197_PopulatingNameFieldInMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191617444_AddingBirthdayFieldToCustomerTable.resx">
+      <DependentUpon>202007191617444_AddingBirthdayFieldToCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191627209_updatedBirthdateField.resx">
+      <DependentUpon>202007191627209_updatedBirthdateField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
@@ -24,25 +25,25 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            var customers = _context.Customers;
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
             return View(customers);
         }
 
         public ActionResult Details(int id)
         {
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
             if (customer == null)
                 return HttpNotFound();
             else
                 return View(customer);
         }
-        public IEnumerable<Customer> getCustomers()
-        {
-            return new List<Customer> (){
-                new Customer { Name = "Julie Adams", Id = 1},
-                new Customer { Name = "Jhon Doe", Id = 2},
-                new Customer { Name = "Hassan Siddiqui", Id = 3}
-            };
-        }
+        //private IEnumerable<Customer> getCustomers()
+        //{
+        //    return new List<Customer> (){
+        //        new Customer { Name = "Julie Adams", Id = 1},
+        //        new Customer { Name = "Jhon Doe", Id = 2},
+        //        new Customer { Name = "Hassan Siddiqui", Id = 3}
+        //    };
+        //}
     }
 }
