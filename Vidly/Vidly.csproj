@@ -193,10 +193,38 @@
     <Compile Include="Migrations\202007191627209_updatedBirthdateField.designer.cs">
       <DependentUpon>202007191627209_updatedBirthdateField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007191635113_updatedMovieClassFields.cs" />
+    <Compile Include="Migrations\202007191635113_updatedMovieClassFields.designer.cs">
+      <DependentUpon>202007191635113_updatedMovieClassFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007191638591_GenreClassAdded.cs" />
+    <Compile Include="Migrations\202007191638591_GenreClassAdded.designer.cs">
+      <DependentUpon>202007191638591_GenreClassAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007191645050_addedgenreFieldsToMvieClass.cs" />
+    <Compile Include="Migrations\202007191645050_addedgenreFieldsToMvieClass.designer.cs">
+      <DependentUpon>202007191645050_addedgenreFieldsToMvieClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007191647282_PopulatingGenreTable.cs" />
+    <Compile Include="Migrations\202007191647282_PopulatingGenreTable.designer.cs">
+      <DependentUpon>202007191647282_PopulatingGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007200856182_UpdatedenreFieldMovieTable.cs" />
+    <Compile Include="Migrations\202007200856182_UpdatedenreFieldMovieTable.designer.cs">
+      <DependentUpon>202007200856182_UpdatedenreFieldMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007200858251_removedGenreFieldFromMovie.cs" />
+    <Compile Include="Migrations\202007200858251_removedGenreFieldFromMovie.designer.cs">
+      <DependentUpon>202007200858251_removedGenreFieldFromMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007200902055_removedMemberShipTypeFieldsFromCustomer.cs" />
+    <Compile Include="Migrations\202007200902055_removedMemberShipTypeFieldsFromCustomer.designer.cs">
+      <DependentUpon>202007200902055_removedMemberShipTypeFieldsFromCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -288,6 +316,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007191627209_updatedBirthdateField.resx">
       <DependentUpon>202007191627209_updatedBirthdateField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191635113_updatedMovieClassFields.resx">
+      <DependentUpon>202007191635113_updatedMovieClassFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191638591_GenreClassAdded.resx">
+      <DependentUpon>202007191638591_GenreClassAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191645050_addedgenreFieldsToMvieClass.resx">
+      <DependentUpon>202007191645050_addedgenreFieldsToMvieClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007191647282_PopulatingGenreTable.resx">
+      <DependentUpon>202007191647282_PopulatingGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007200856182_UpdatedenreFieldMovieTable.resx">
+      <DependentUpon>202007200856182_UpdatedenreFieldMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007200858251_removedGenreFieldFromMovie.resx">
+      <DependentUpon>202007200858251_removedGenreFieldFromMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007200902055_removedMemberShipTypeFieldsFromCustomer.resx">
+      <DependentUpon>202007200902055_removedMemberShipTypeFieldsFromCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

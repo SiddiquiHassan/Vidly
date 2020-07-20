@@ -10,6 +10,17 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        private ApplicationUser.ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationUser.ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Movies
         public ActionResult Random()
         {
@@ -47,14 +58,14 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            var movies = getMovies();
+            var movies = _context.Movies;
 
             return View(movies);
         }
 
         public ActionResult Details(int? id)
         {
-            var movie = getMovies().SingleOrDefault(m => m.Id == id);
+            var movie = _context.Movies;
             if (movie == null)
             {
                 return HttpNotFound();
